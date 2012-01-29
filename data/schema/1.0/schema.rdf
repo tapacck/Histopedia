@@ -1,0 +1,94 @@
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+
+  xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+  xmlns:map="http://nurl.org/0/geography/map/1.0/"
+
+<!-- http://www.w3.org/TR/owl-time/ -->
+
+  xmlns:history="http://www.easterngraphics.com/X-4GPL/History/1.0/index.rdf#"
+>
+
+<!-- TODO: use RDFMap for geospatial information such as GPS Coordinates -->
+
+<rdf:Description rdf:ID="Event">
+  <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  <rdfs:label>Event</rdfs:label>
+  <rdfs:comment>An event</rdfs:comment>
+
+<!-- rdfs:label [1,1] -->
+
+<!-- format is YYYY[-MM[-DD]], use either Date or DateFrom and DateTo -->
+
+<!-- history:Date [0,1] -->
+
+<!-- history:DateFrom [0,1] -->
+<!-- history:DateTo [0,1] -->
+
+<!-- history:Location [0,N] -->
+<!-- history:Person [0,N] -->
+<!-- history:PreEvent [0,N] -->
+<!-- history:PostEvent [0,N] -->
+<!-- history:HTMLInfo [0,N] -->
+
+</rdf:Description>
+
+<rdf:Description rdf:ID="PreEvent">
+  <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  <rdfs:label>Predecessor Event</rdfs:label>
+  <rdfs:comment>An event that is a direct predecessor</rdfs:comment>
+  <rdfs:subclassOf rdf:resource="Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:ID="PostEvent">
+  <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  <rdfs:label>Post Event</rdfs:label>
+  <rdfs:comment>An event that is a director successor</rdfs:comment>
+  <rdfs:subclassOf rdf:resource="Event"/>
+</rdf:Description>
+
+<rdf:Description rdf:ID="Actor">
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdfs:label>Actor</rdfs:label>
+  <rdfs:comment>An actor</rdfs:comment>
+
+<!-- rdfs:label [1,1] -->
+<!-- history:HTMLInfo [0,N] -->
+
+</rdf:Description>
+
+<rdf:Description rdf:ID="Person">
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdfs:label>Person</rdfs:label>
+  <rdfs:comment>A natural person</rdfs:comment>
+  <rdfs:subclassOf rdf:resource="Actor"/>
+
+<!-- rdfs:label [1,1] -->
+<!-- ? title/peerage [0,N] -->
+<!-- vcard:Given [0,1] -->
+<!-- vcard:Family [0,1] -->
+<!-- history:HTMLInfo [0,N] -->
+
+</rdf:Description>
+
+<rdf:Description rdf:ID="HTMLInfo">
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdfs:label>HTML Info Link</rdfs:label>
+  <rdfs:comment>An additional Information in HTML format</rdfs:comment>
+
+</rdf:Description>
+
+<rdf:Description rdf:ID="Location">
+  <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdfs:label>Location</rdfs:label>
+  <rdfs:comment>A geographical location</rdfs:comment>
+
+<!-- rdfs:label [1,1] -->
+<!-- ? GPS [0,1] -->
+<!-- history:HTMLInfo [0,N] -->
+
+</rdf:Description>
+
+</rdf:RDF>
+

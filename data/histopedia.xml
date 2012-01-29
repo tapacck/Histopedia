@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">]>
+
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+  xmlns:history="http://histopedia.eu/schema/1.0#"
+  xml:base="http://history.xml"
+>
+
+<!-- Events -->
+
+<rdf:Description rdf:about="http://histopedia.eu/event/1793VictoryOfNapoleonInToulon">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Napoleon's victory in Toulon</rdfs:label>
+  <history:Date>1793-12-18</history:Date>
+  <history:Location rdf:resource="http://histopedia.eu/location/Toulon"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/NapoleonBonaparte"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/JeanFrancoisCarteaux"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/CharlesOHara"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0771DeathOfKarlmannFirst">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Death of Karlmann the 1st</rdfs:label>
+  <history:Date>0771-12-04</history:Date>
+  <history:Location rdf:resource="http://histopedia.eu/location/Samoussy"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/Karlmann1st"/>
+  <history:PostEvent rdf:resource="http://histopedia.eu/event/0771KarlTheGreatBecomesMonocrat"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0771KarlTheGreatBecomesMonocrat">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Karl the Great becomes monocrat</rdfs:label>
+  <history:Date>0771</history:Date>
+  <history:Person rdf:resource="http://histopedia.eu/person/KarlTheGreat"/>
+  <history:PreEvent rdf:resource="http://histopedia.eu/event/0771DeathOfKarlmannFirst"/>
+  <history:PostEvent rdf:resource="http://histopedia.eu/event/0769DukeOfAquitaineIndependence"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0769DukeOfAquitaineIndependence">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>The Duke of Aquitaine wants to be independent</rdfs:label>
+  <history:Date>0769</history:Date>
+  <history:Location rdf:resource="http://histopedia.eu/location/Aquitaine"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/KarlTheGreat"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/HunoldDukeOfAquitaine"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0769EscapeOfHunold">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Escape of Hunold, Duke of Aquitaine</rdfs:label>
+  <history:Date>0769</history:Date>
+  <history:Location rdf:resource="http://histopedia.eu/location/Aquitaine"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/KarlTheGreat"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/HunoldDukeOfAquitaine"/>
+  <history:PostEvent rdf:resource="http://histopedia.eu/event/0769LupusPresentsHisDukedomToTheFranks"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0769LupusPresentsHisDukedomToTheFranks">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Lupus, Duke of Gascogne presents his Dukedom to the Franks</rdfs:label>
+  <history:Date>0769</history:Date>
+  <history:Location rdf:resource="http://histopedia.eu/location/Aquitaine"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/KarlTheGreat"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/LupusDukeOfGascogne"/>
+  <history:PreEvent rdf:resource="http://histopedia.eu/event/0769EscapeOfHunold"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0772SaxonianWarsOfKarlTheGreat">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Saxonian Wars of Karl the Great</rdfs:label>
+  <history:DateFrom>0772</history:DateFrom>
+  <history:DateTo>0804</history:DateTo>
+  <history:Location rdf:resource="http://histopedia.eu/location/Saxonia"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/KarlTheGreat"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/Widukind"/>
+  <history:PostEvent rdf:resource="http://histopedia.eu/event/0782ConstitutionOfFranconianDukedoms"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/event/0782ConstitutionOfFranconianDukedoms">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Event"/>
+  <rdfs:label>Constitution of the Franconian Dukedoms</rdfs:label>
+  <history:Date>0782</history:Date>
+  <history:Location rdf:resource="http://histopedia.eu/location/Franconia"/>
+  <history:Person rdf:resource="http://histopedia.eu/person/KarlTheGreat"/>
+  <history:PreEvent rdf:resource="http://histopedia.eu/event/0772SaxonianWarsOfKarlTheGreat"/>
+</rdf:Description>
+
+<!-- Locations -->
+
+<rdf:Description rdf:about="http://histopedia.eu/location/Samoussy">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Location"/>
+  <rdfs:label>Samoussy</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/location/Toulon">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Location"/>
+  <rdfs:label>Toulon</rdfs:label>
+<!-- ? GPS  43° 7'27.19"N 5°55'40.53"E -->
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/location/Aquitaine">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Location"/>
+  <rdfs:label>Aquitaine</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/location/Gascogne">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Location"/>
+  <rdfs:label>Gascogne</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/location/Saxonia">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Location"/>
+  <rdfs:label>Saxony</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/location/Franconia">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Location"/>
+  <rdfs:label>Franconia</rdfs:label>
+</rdf:Description>
+
+<!-- Actors -->
+
+<rdf:Description rdf:about="http://histopedia.eu/person/CharlesOHara">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Charles O'Hara</rdfs:label>
+  <vcard:Given>Charles</vcard:Given>
+  <vcard:Family>O'Hara</vcard:Family>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/HunoldDukeOfAquitaine">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Hunold, Duke of Aquitaine</rdfs:label>
+<!-- ? title Duke of Aquitanien  -->
+  <vcard:Given>Hunold</vcard:Given>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/JeanFrancoisCarteaux">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Jean-François Carteaux</rdfs:label>
+  <vcard:Given>Jean-François</vcard:Given>
+  <vcard:Family>Carteaux</vcard:Family>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/KarlTheGreat">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Karl the Great</rdfs:label>
+<!-- ? title Karl the Great -->
+  <vcard:Given>Karl</vcard:Given>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/Karlmann1st">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Karlmann the First</rdfs:label>
+<!-- ? title Karlmann the First -->
+  <vcard:Given>Karlmann</vcard:Given>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/NapoleonBonaparte">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Napoleon Bonaparte</rdfs:label>
+  <vcard:Given>Napoleon</vcard:Given>
+  <vcard:Family>Bonaparte</vcard:Family>
+  <history:HTMLInfo>http://www.bbc.co.uk/history/historic_figures/bonaparte_napoleon.shtml</history:HTMLInfo>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/LupusDukeOfGascogne">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Lupus, Duke of Gascogne</rdfs:label>
+<!-- ? title Duke of Gascogne -->
+  <vcard:Given>Lupus</vcard:Given>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://histopedia.eu/person/Widukind">
+  <rdf:type rdf:resource="http://histopedia.eu/schema/1.0#Person"/>
+  <rdfs:label>Widukind</rdfs:label>
+  <vcard:Given>Widukind</vcard:Given>
+</rdf:Description>
+
+</rdf:RDF>
