@@ -39,114 +39,114 @@ public class Histopedia_Web implements EntryPoint {
 	 * This is the entry point method.
 	 */
 	public void onModuleLoad() {
-		final Button sendButton = new Button("Send");
-		final TextBox nameField = new TextBox();
-		nameField.setText("GWT User");
-		final Label errorLabel = new Label();
+		final Button tSendButton = new Button("Send");
+		final TextBox tNameField = new TextBox();
+		tNameField.setText("GWT User");
+		final Label tErrorLabel = new Label();
 
 		// We can add style names to widgets
-		sendButton.addStyleName("sendButton");
+		tSendButton.addStyleName("tSendButton");
 
-		// Add the nameField and sendButton to the RootPanel
+		// Add the tNameField and tSendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
-		RootPanel.get("nameFieldContainer").add(nameField);
-		RootPanel.get("sendButtonContainer").add(sendButton);
-		RootPanel.get("errorLabelContainer").add(errorLabel);
+		RootPanel.get("tNameFieldContainer").add(tNameField);
+		RootPanel.get("tSendButtonContainer").add(tSendButton);
+		RootPanel.get("tErrorLabelContainer").add(tErrorLabel);
 
 		// Focus the cursor on the name field when the app loads
-		nameField.setFocus(true);
-		nameField.selectAll();
+		tNameField.setFocus(true);
+		tNameField.selectAll();
 
 		// Create the popup dialog box
-		final DialogBox dialogBox = new DialogBox();
-		dialogBox.setText("Remote Procedure Call");
-		dialogBox.setAnimationEnabled(true);
-		final Button closeButton = new Button("Close");
+		final DialogBox tDialogBox = new DialogBox();
+		tDialogBox.setText("Remote Procedure Call");
+		tDialogBox.setAnimationEnabled(true);
+		final Button tCloseButton = new Button("Close");
 		// We can set the id of a widget by accessing its Element
-		closeButton.getElement().setId("closeButton");
-		final Label textToServerLabel = new Label();
-		final HTML serverResponseLabel = new HTML();
-		VerticalPanel dialogVPanel = new VerticalPanel();
-		dialogVPanel.addStyleName("dialogVPanel");
-		dialogVPanel.add(new HTML("<b>Sending name to the server:</b>"));
-		dialogVPanel.add(textToServerLabel);
-		dialogVPanel.add(new HTML("<br><b>Server replies:</b>"));
-		dialogVPanel.add(serverResponseLabel);
-		dialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_RIGHT);
-		dialogVPanel.add(closeButton);
-		dialogBox.setWidget(dialogVPanel);
+		tCloseButton.getElement().setId("tCloseButton");
+		final Label tTextToServerLabel = new Label();
+		final HTML tServerResponseLabel = new HTML();
+		VerticalPanel tDialogVPanel = new VerticalPanel();
+		tDialogVPanel.addStyleName("dialogVPanel");
+		tDialogVPanel.add(new HTML("<b>Sending name to the server:</b>"));
+		tDialogVPanel.add(tTextToServerLabel);
+		tDialogVPanel.add(new HTML("<br><b>Server replies:</b>"));
+		tDialogVPanel.add(tServerResponseLabel);
+		tDialogVPanel.setHorizontalAlignment(VerticalPanel.ALIGN_RIGHT);
+		tDialogVPanel.add(tCloseButton);
+		tDialogBox.setWidget(tDialogVPanel);
 
-		// Add a handler to close the DialogBox
-		closeButton.addClickHandler(new ClickHandler() {
-			public void onClick(ClickEvent event) {
-				dialogBox.hide();
-				sendButton.setEnabled(true);
-				sendButton.setFocus(true);
+		// Add a handler to close the tDialogBox
+		tCloseButton.addClickHandler(new ClickHandler() {
+			public void onClick(ClickEvent pEvent) {
+				tDialogBox.hide();
+				tSendButton.setEnabled(true);
+				tSendButton.setFocus(true);
 			}
 		});
 
-		// Create a handler for the sendButton and nameField
+		// Create a handler for the tSendButton and tNameField
 		class MyHandler implements ClickHandler, KeyUpHandler {
 			/**
-			 * Fired when the user clicks on the sendButton.
+			 * Fired when the user clicks on the tSendButton.
 			 */
-			public void onClick(ClickEvent event) {
+			public void onClick(ClickEvent pEvent) {
 				sendNameToServer();
 			}
 
 			/**
-			 * Fired when the user types in the nameField.
+			 * Fired when the user types in the tNameField.
 			 */
-			public void onKeyUp(KeyUpEvent event) {
-				if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
+			public void onKeyUp(KeyUpEvent pEvent) {
+				if (pEvent.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
 					sendNameToServer();
 				}
 			}
 
 			/**
-			 * Send the name from the nameField to the server and wait for a response.
+			 * Send the name from the tNameField to the server and wait for a response.
 			 */
 			private void sendNameToServer() {
 				// First, we validate the input.
-				errorLabel.setText("");
-				String textToServer = nameField.getText();
-				if (!FieldVerifier.isValidName(textToServer)) {
-					errorLabel.setText("Please enter at least four characters");
+				tErrorLabel.setText("");
+				String tTextToServer = tNameField.getText();
+				if (!FieldVerifier.isValidName(tTextToServer)) {
+					tErrorLabel.setText("Please enter at least four characters");
 					return;
 				}
 
 				// Then, we send the input to the server.
-				sendButton.setEnabled(false);
-				textToServerLabel.setText(textToServer);
-				serverResponseLabel.setText("");
-				mHistopediaService.checkServer(textToServer,
+				tSendButton.setEnabled(false);
+				tTextToServerLabel.setText(tTextToServer);
+				tServerResponseLabel.setText("");
+				mHistopediaService.checkServer(tTextToServer,
 						new AsyncCallback<String>() {
-							public void onFailure(Throwable caught) {
+							public void onFailure(Throwable pCaught) {
 								// Show the RPC error message to the user
-								dialogBox
+								tDialogBox
 										.setText("Remote Procedure Call - Failure");
-								serverResponseLabel
-										.addStyleName("serverResponseLabelError");
-								serverResponseLabel.setHTML(SERVER_ERROR);
-								dialogBox.center();
-								closeButton.setFocus(true);
+								tServerResponseLabel
+										.addStyleName("tServerResponseLabelError");
+								tServerResponseLabel.setHTML(SERVER_ERROR);
+								tDialogBox.center();
+								tCloseButton.setFocus(true);
 							}
 
-							public void onSuccess(String result) {
-								dialogBox.setText("Remote Procedure Call");
-								serverResponseLabel
-										.removeStyleName("serverResponseLabelError");
-								serverResponseLabel.setHTML(result);
-								dialogBox.center();
-								closeButton.setFocus(true);
+							public void onSuccess(String pResult) {
+								tDialogBox.setText("Remote Procedure Call");
+								tServerResponseLabel
+										.removeStyleName("tServerResponseLabelError");
+								tServerResponseLabel.setHTML(pResult);
+								tDialogBox.center();
+								tCloseButton.setFocus(true);
 							}
 						});
 			}
 		}
 
 		// Add a handler to send the name to the server
-		MyHandler handler = new MyHandler();
-		sendButton.addClickHandler(handler);
-		nameField.addKeyUpHandler(handler);
+		MyHandler tHandler = new MyHandler();
+		tSendButton.addClickHandler(tHandler);
+		tNameField.addKeyUpHandler(tHandler);
 	}
 }
