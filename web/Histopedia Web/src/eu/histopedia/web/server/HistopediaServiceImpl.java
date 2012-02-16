@@ -11,24 +11,24 @@ import com.google.gwt.user.server.rpc.RemoteServiceServlet;
 public class HistopediaServiceImpl extends RemoteServiceServlet implements
 HistopediaService {
 
-	public String checkServer(String input) throws IllegalArgumentException {
+	public String checkServer(String pInput) throws IllegalArgumentException {
 		// Verify that the input is valid. 
-		if (!FieldVerifier.isValidName(input)) {
+		if (!FieldVerifier.isValidName(pInput)) {
 			// If the input is not valid, throw an IllegalArgumentException back to
 			// the client.
 			throw new IllegalArgumentException(
 					"Name must be at least 4 characters long");
 		}
 
-		String serverInfo = getServletContext().getServerInfo();
-		String userAgent = getThreadLocalRequest().getHeader("User-Agent");
+		String tServerInfo = getServletContext().getServerInfo();
+		String tUserAgent = getThreadLocalRequest().getHeader("User-Agent");
 
 		// Escape data from the client to avoid cross-site script vulnerabilities.
-		input = escapeHtml(input);
-		userAgent = escapeHtml(userAgent);
+		pInput = escapeHtml(pInput);
+		tUserAgent = escapeHtml(tUserAgent);
 
-		return "Hello, " + input + "!<br><br>I am running " + serverInfo
-				+ ".<br><br>It looks like you are using:<br>" + userAgent;
+		return "Hello, "+pInput+"!<br><br>I am running "+tServerInfo
+				+".<br><br>It looks like you are using:<br>"+tUserAgent;
 	}
 
 	/**
@@ -38,11 +38,11 @@ HistopediaService {
 	 * @param html the html string to escape
 	 * @return the escaped string
 	 */
-	private String escapeHtml(String html) {
-		if (html == null) {
+	private String escapeHtml(String tHtml) {
+		if (tHtml == null) {
 			return null;
 		}
-		return html.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
+		return tHtml.replaceAll("&", "&amp;").replaceAll("<", "&lt;")
 				.replaceAll(">", "&gt;");
 	}
 }

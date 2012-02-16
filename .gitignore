@@ -1,3 +1,5 @@
 *~
 *.class
 *.jar
+
+web/Histopedia Web/.gwt/.gwt-log
