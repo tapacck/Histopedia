@@ -27,7 +27,7 @@ public class Test {
 		Util.setModel(model());
 		HQuery.setModel(model());
 		
-		String tInputFileName = "data/histopedia.xml";
+		String tInputFileName = "../../data/histopedia.xml";
 
 		InputStream tIn = FileManager.get().open(tInputFileName);
 		if (tIn == null) {

@@ -49,9 +49,9 @@ public class Histopedia_Web implements EntryPoint {
 
 		// Add the tNameField and tSendButton to the RootPanel
 		// Use RootPanel.get() to get the entire body element
-		RootPanel.get("tNameFieldContainer").add(tNameField);
-		RootPanel.get("tSendButtonContainer").add(tSendButton);
-		RootPanel.get("tErrorLabelContainer").add(tErrorLabel);
+		RootPanel.get("nameFieldContainer").add(tNameField);
+		RootPanel.get("sendButtonContainer").add(tSendButton);
+		RootPanel.get("errorLabelContainer").add(tErrorLabel);
 
 		// Focus the cursor on the name field when the app loads
 		tNameField.setFocus(true);
