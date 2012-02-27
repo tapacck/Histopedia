@@ -2,7 +2,6 @@
 *.class
 *.jar
 
-web/HW1/.gwt/.gwt-log
-web/HW1/war/
-
-web/HW1/.settings/com.google.appengine.eclipse.core.prefs
+app/HW1/.gwt/.gwt-log
+app/HW1/war/
+app/HW1/.settings/com.google.appengine.eclipse.core.prefs
