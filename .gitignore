@@ -2,7 +2,7 @@
 *.class
 *.jar
 
-web/"Histopedia Web"/.gwt/.gwt-log
-web/"Histopedia Web"/war/
+web/HW1/.gwt/.gwt-log
+web/HW1/war/
 
-web/Histopedia Web/.settings/com.google.appengine.eclipse.core.prefs
+web/HW1/.settings/com.google.appengine.eclipse.core.prefs
