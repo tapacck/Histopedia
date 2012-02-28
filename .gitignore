@@ -8,3 +8,5 @@ app/HW1/war/WEB-INF/classes/
 app/HW1/war/WEB-INF/deploy/
 app/HW1/war/WEB-INF/lib/
 app/HW1/.settings/com.google.appengine.eclipse.core.prefs
+
+.DS_Store
