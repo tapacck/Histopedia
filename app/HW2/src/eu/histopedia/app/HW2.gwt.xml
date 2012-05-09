@@ -2,7 +2,7 @@
 <module rename-to='hw2'>
   <inherits name="com.google.gwt.user.User"/>
   <inherits name="com.smartgwt.SmartGwt"/>
-  <entry-point class="eu.histopedia.app.client.HW2App"/>
+  <entry-point class="eu.histopedia.app.client.HiApplication"/>
 
   <source path="client"/>
 
