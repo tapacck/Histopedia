@@ -3,6 +3,7 @@
 *.jar
 
 app/HW1/.gwt/.gwt-log
+app/HW1/gwt-unitCache
 app/HW1/war/histopedia_web/
 app/HW1/war/WEB-INF/classes/
 app/HW1/war/WEB-INF/deploy/
@@ -10,6 +11,7 @@ app/HW1/war/WEB-INF/lib/
 app/HW1/.settings/com.google.appengine.eclipse.core.prefs
 
 app/HW2/.gwt/.gwt-log
+app/HW2/gwt-unitCache
 app/HW2/war/hw2/
 app/HW2/war/WEB-INF/classes/
 app/HW2/war/WEB-INF/deploy/
